@@ -60,7 +60,7 @@ describe('lazy-bouncer routes', () => {
     });
   });
 
-  it.only('should return a 401 when signed out and listing all users', async () => {
+  it('should return a 401 when signed out and listing all users', async () => {
     const res = await request(app).get('/api/v1/users');
     // console.log('|res.body', res.body);
     expect(res.body).toEqual({
